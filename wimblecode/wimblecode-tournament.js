@@ -72,16 +72,18 @@ const createTournament = () => {
     }
 
     if (final.getWinner() !== null) {
-      console.log(`FINAL\n`);
+      console.log(`FINAL`);
       console.log(final.getMatchScore());
-
-      console.log("- - - - - - - - - - - - - - - - - - - - - - -\n");
+      console.log("- - - - - - - - - - - - - - - - - - - - - - -");
       console.log(`GANADOR DEL TORNEO: ${final.getWinner()}`);
       console.log("- - - - - - - - - - - - - - - - - - - - - - -\n");
     }
   }
 };
 
+/* CREATEMATCH
+  Esta funcion no cambia respecto a wimblecode.js
+---------------------------------------------------- */
 const createMatch = (player1, player2) => {
   const match = new Match(player1, player2);
   const p1 = match.players[0];
@@ -234,4 +236,5 @@ const createMatch = (player1, player2) => {
   };
 };
 
+// Inicializamos el torneo:
 createTournament();

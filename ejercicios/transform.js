@@ -33,7 +33,11 @@ const desarrolladoresJavascript = datos.filter((dev) => {
   return dev.habilidades.includes("JavaScript");
 });
 
-console.log(desarrolladoresJavascript);
+/*
+   uso JSON.stringify porque el resultado tiene varios niveles 
+   de profundidad y así se obtiene un resultado más legible en consola
+*/
+console.log(JSON.stringify(desarrolladoresJavascript, null, 2));
 
 // PARTE 2 - Crear una lista con todos los nombres de proyecto
 const nombresProyectos = datos.reduce((accum, dev) => {
